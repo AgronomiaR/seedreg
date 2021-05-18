@@ -1,0 +1,7 @@
+{
+    "installOptions": {
+        "installFromRepository": true,
+        "libraryPath": "C:/Users/Gabriel/OneDrive - uel.br/Documentos/R/win-library/4.0",
+        "installDependencies": true
+    }
+}

@@ -1,0 +1,11 @@
+
+library(seedreg)
+data("aristolochia")
+attach(aristolochia)
+BC_model(trat,resp)
+LL_model(trat,resp)
+CD_model(trat,resp)
+LM_model(trat,resp,grau=3)
+normal_model(trat,resp)
+loess_model(trat,resp)
+quali_model(trat,resp)

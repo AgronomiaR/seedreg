@@ -1,0 +1,16 @@
+resp=c(0,0,1,3,6,10,11,11,11,11)
+temp=c(1,2,3,4,5,6,7,8,9,10)
+da=data.frame(resp,temp)
+mod=drm(resp~temp,fct=LL.3())
+xp=seq(min(temp),max(temp),length=1000)
+yp=predict(mod,newdata = data.frame(temp=xp))
+x=c(xp,xp[1000],xp[1])
+y=c(yp,0,yp[1])
+ggplot(data.frame(x,y),aes(x=x,y=y))+
+  geom_area()+
+  theme_bw()+  
+  geom_line(data = da,aes(x=temp,y=resp),size=1)+
+  geom_point(data = da,aes(x=temp,y=resp),size=4,
+             fill="blue",pch=21,color="black")+
+  theme(axis.text = element_text(size=12))+
+  geom_label(x=7.5,y=5,label="AAC = 55.90")
